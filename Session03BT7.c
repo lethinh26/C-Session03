@@ -1,13 +1,12 @@
 #include <stdio.h>
 int main() {
-	int a,b,result=0;
+	int num,a,b,c,d;
 	printf("Nhap so nguyen co 4 chu so: ");
-	scanf("%d", &a);
-	while(a>0) {
-		b = a%10;
-		result += b;
-		a /= 10;
-	}
-	printf("Tong: %d",result);
+	scanf("%d", &num);
+	a = num / 1000;
+	b = num / 100 % 10;
+	c = num / 10 % 10;
+	d = num % 10;
+	printf("Tong: %d",a+b+c+d);
 	return 0;
 }
