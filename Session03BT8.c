@@ -1,14 +1,12 @@
 #include <stdio.h>
 int main() {
-	int a,b[4],i;
+	int num,a,b,c,d;
 	printf("Nhap so nguyen co 4 chu so: ");
-	scanf("%d", &a);
-	for (i=3; i >= 0; i--) {
-		b[i] = a%10;
-		a /= 10;
-	}
-	for (i=3;i >= 0 ; i--) {
-		printf("%d",b[i]);
-	}
+	scanf("%d", &num);
+	a = num / 1000;
+	b = num / 100 % 10;
+	c = num / 10 % 10;
+	d = num % 10;
+	printf("Tong: %d%d%d%d",d,c,b,a);
 	return 0;
 }
